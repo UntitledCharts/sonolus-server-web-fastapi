@@ -1,4 +1,4 @@
-# The prefix you set for VITE_BASE_URL (without the trailing slash)
+# The prefix you're using! eg. `https://url.to/server/thumbnail.png`
 prefix: "/server"
 # FastAPI server port
 port: 39040
