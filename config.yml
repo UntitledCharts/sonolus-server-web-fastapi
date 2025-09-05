@@ -1,0 +1,4 @@
+# The prefix you set for VITE_BASE_URL (without the trailing slash)
+prefix: "/server"
+# FastAPI server port
+port: 39040
