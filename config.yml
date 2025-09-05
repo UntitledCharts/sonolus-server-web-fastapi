@@ -2,3 +2,11 @@
 prefix: "/server"
 # FastAPI server port
 port: 39040
+# /sonolus redirect (eg. /server/sonolus/ -> path)
+redirect-sonolus:
+  enabled: true
+  path: "/"
+# only relevant for redirect
+# this will set the redirect to either http or https
+# useful if you're serving over cloudflare's flexible
+https: true
