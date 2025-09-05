@@ -25,6 +25,8 @@ async def serve_spa(path: str):
     file_path = dist_dir / path
     if not file_path.exists():
         file_path = dist_dir / "index.html"
+    elif file_path.is_dir():
+        file_path = dist_dir / "index.html"
     return FileResponse(file_path)
 
 
