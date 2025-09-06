@@ -35,6 +35,8 @@ async def serve_spa(request: Request, path: str):
 
             if parsed_url.scheme and parsed_url.netloc:
                 new_url = urljoin(redirect_base, path)
+                if config["redirect-sonolus"]["add-trailing-slash"]:
+                    new_url += "/"
                 if query_string:
                     new_url = f"{new_url}?{query_string}"
                 parsed_url = urlparse(new_url)
@@ -44,6 +46,8 @@ async def serve_spa(request: Request, path: str):
                 base_url = str(request.base_url)
                 full_url = urljoin(base_url, redirect_base)
                 full_url = urljoin(full_url, path)
+                if config["redirect-sonolus"]["add-trailing-slash"]:
+                    full_url += "/"
                 if query_string:
                     full_url = f"{full_url}?{query_string}"
                 parsed_url = urlparse(full_url)
