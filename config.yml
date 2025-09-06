@@ -1,4 +1,4 @@
 # The prefix you're using! eg. `https://url.to/server/thumbnail.png`
-prefix: "/server"
+prefix: ""
 # FastAPI server port
 port: 39040
